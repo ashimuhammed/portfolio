@@ -2,6 +2,9 @@
 import About from "./components/about";
 import Header from "./components/header";
 import Navbar from "./components/navbar";
+import Work from "./components/works";
+import Portfolio from "./components/portfolio";
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
@@ -9,6 +12,9 @@ export default function Home() {
     <Navbar />
     <Header />
     <About />
+    <Work />
+    <Portfolio />
+    <Contact />
     </>
   );
 }

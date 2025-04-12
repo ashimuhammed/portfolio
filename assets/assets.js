@@ -5,11 +5,11 @@ import edu_icon from './edu-icon.png';
 import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
-import vscode from './vscode.png';
-import firebase from './firebase.png';
-import figma from './figma.png';
-import git from './git.png';
-import mongodb from './mongodb.png';
+// import vscode from './vscode.png';
+// import firebase from './firebase.png';
+// import figma from './figma.png';
+// import git from './git.png';
+// import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
 import logo_dark from './logo_dark.png';
@@ -35,6 +35,22 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import html from './html.png';
+import css from './css.png';
+import javascript from './javascript.png';
+import bootstrap from './bootstrap.png';
+import python from './python.png';
+import django from './django.png';
+import sql from './sql.png';
+import mysql from './mysql.png';
+import postgresql from './postgresql.png';
+import odoo from './odoo.png';
+import xml from './xml.png';
+import erp from './erp.png';
+import git from './git.png';
+import github from './github.png';
+import react from './react.png';
+
 
 export const assets = {
     user_image,
@@ -44,11 +60,11 @@ export const assets = {
     edu_icon_dark,
     project_icon,
     project_icon_dark,
-    vscode,
-    firebase,
-    figma,
-    git,
-    mongodb,
+    // vscode,
+    // firebase,
+    // figma,
+    // git,
+    // mongodb,
     right_arrow_white,
     logo,
     logo_dark,
@@ -73,45 +89,63 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    html,
+    css,
+    javascript,
+    bootstrap,
+    python,
+    django,
+    sql,
+    mysql,
+    postgresql,
+    odoo,
+    xml,
+    erp,
+    github,
+    git,
+    react
+
+
 };
 
-export const workData = [
-    {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
-    },
-    {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
-    },
-    {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
-    },
-    {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
-    },
-]
+// export const workData = [
+//     {
+//         title: 'Frontend project',
+//         description: 'Web Design',
+//         bgImage: '/work-1.png',
+//     },
+//     {
+//         title: 'Geo based app',
+//         description: 'Mobile App',
+//         bgImage: '/work-2.png',
+//     },
+//     {
+//         title: 'Photography site',
+//         description: 'Web Design',
+//         bgImage: '/work-3.png',
+//     },
+//     {
+//         title: 'UI/UX designing',
+//         description: 'UI/UX Design',
+//         bgImage: '/work-4.png',
+//     },
+// ]
 
-export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
-]
+// export const serviceData = [
+//     { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
+//     { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
+//     { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
+//     { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+// ]
 
-export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript, React Js, Python, Django, Xml' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'BA ENGLISH LANGAUAGE AND LITERATURE' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
-];
+// export const infoList = [
+//     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript, React Js, Python, Django, Xml' },
+//     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'BA ENGLISH LANGAUAGE AND LITERATURE'  },
+//     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+// ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    // assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.html,assets.css,assets.javascript,assets.bootstrap,assets.python,assets.django,assets.sql,assets.xml,assets.postgresql,assets.mysql,assets.odoo,assets.erp,assets.git,assets.github,assets.react,
 ];
