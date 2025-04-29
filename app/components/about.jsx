@@ -4,14 +4,15 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div id='about' className='w-full px-[12%] py-10 scroll-mt-20'>
+    <div id='about' className='w-full px-[12%] py-10 scroll-mt-20 bg-gray-50'>
       <h1 className=' my-24 mb-2 text-4xl font-Ovo text-center text-gray-800'>About Me</h1>
       <div className='w-20 h-1 bg-teal-500 mx-auto mt-0 mb-4'></div>
 
       <p className='text-center mt-6 max-w-3xl mx-auto text-gray-700 font-Ovo'>
-        Enthusiastic Odoo ERP Developer with expertise in Python Django Full-Stack Development.
-        Strong knowledge in building web applications, managing databases, and customizing Odoo
-        modules. Passionate about delivering scalable and efficient business solutions.
+      Enthusiastic Odoo ERP Developer with expertise in Python Full-Stack Development.
+      Skilled in both backend and frontend technologies, including Django, REST APIs, React.js, and database management. 
+      Strong knowledge in building scalable web applications, managing databases, and customizing Odoo modules to meet diverse business needs.
+      Passionate about delivering efficient, user-centric, and maintainable business solutions.
       </p>
 
       <div className='flex flex-col lg:flex-row items-start justify-between gap-10 mt-16'>
@@ -26,7 +27,7 @@ const About = () => {
 
   {/* Details */}
   <div className='w-full lg:w-2/3'>
-    <h3 className='text-2xl font-Ovo text-gray-800 mb-6'>Python/Django Developer & Odoo Developer.</h3>
+    <h3 className='text-2xl font-Ovo text-gray-800 mb-6'>Python Full-Stack Developer & Odoo Developer.</h3>
     
 
     <div className='grid grid-cols-1 sm:grid-cols-1 gap-y-4 gap-x-8 text-gray-700 text-[16px]'>

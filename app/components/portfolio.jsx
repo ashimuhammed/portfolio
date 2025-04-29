@@ -20,12 +20,12 @@ const TimelineItem = ({ title, institution, date, points }) => (
 
 export default function Portfolio() {
   return (
-    <div id="portfolio" className="px-6 mb-24 mt-24 py-20 max-w-5xl mx-auto scroll-mt-20">
+    <div id="portfolio" className="px-6 mb-24 mt-24 py-20 max-w-5xl mx-auto scroll-mt-20 ">
       {/* Header */}
       <div className="text-center mb-24">
         <h1 className="text-4xl font-bold text-gray-800">Resume</h1>
         <div className="w-16 h-1 bg-teal-500 mx-auto my-2"></div>
-        <p className="text-gray-600 text-lg">Odoo Developer</p>
+        <p className="text-gray-600 text-lg">Python Full-Stack developer & Odoo developer</p>
       </div>
 
       {/* Contact & Skills */}
@@ -67,6 +67,7 @@ export default function Portfolio() {
         <h2 className="text-2xl font-bold mb-6 text-gray-900">EDUCATION</h2>
         <div className="border-l-2 border-teal-500 pl-4">
           <TimelineItem title="DIPLOMA IN ODOO DEVELOPMENT (ONGOING)" institution="BTRAC Kannur" date="October 2024" />
+          <TimelineItem title="DIPLOMA IN SOFTWARE engineering " institution="G -TEC COMPUTER EDUCATION" date="Year of completion: 2023"/>
           <TimelineItem title="DEGREE IN ENGLISH" institution="UNIVERSITY OF CALICUT" date="Year of Completion: 2021" />
           <TimelineItem title="PLUS TWO (HIGH SCHOOL)" institution="GHSS KARAKUNNU, Manjeri" date="Year of Completion: 2018" />
         </div>
@@ -99,6 +100,27 @@ export default function Portfolio() {
             ]}
           />
         </div>
+        {/* Work Experience Section */}
+        
+        <div className="border-l-2 border-teal-500 pl-4">
+          <TimelineItem
+            title="PYTHON FULL-STACK DEVELOPER-INTERN"
+            institution="BTRAC Business Technology"
+            date="JULY 2024 – NOVEMBER 24"
+            points={[
+              [
+                "Built a hotel booking system using Django (REST API) and React.js with features like room filtering, secure booking, and admin management.",
+                "Developed an agriculture portal for farmers with real-time crop info, consultation bookings, and admin control using Django and vanilla JavaScript.",
+                "Created RESTful APIs using Django REST Framework and integrated them with React frontend via Axios for dynamic data interaction.",
+                "Worked with PostgreSQL and SQLite databases for relational data handling and performed CRUD operations efficiently.",
+                "Implemented secure authentication systems including user login, registration, and protected routes using Django auth and React context API.",
+                "Styled modern responsive UIs with Tailwind CSS, applying mobile-first design principles and accessibility best practices.",
+                "Integrated third-party services like Razorpay and Google Maps APIs into Django applications for extended functionality."
+              ]
+              
+            ]}
+          />
+        </div>
 
         {/* Projects Section */}
         <h2 className="text-2xl font-bold mt-12 mb-6 text-gray-900">PROJECTS</h2>
@@ -127,7 +149,44 @@ export default function Portfolio() {
               "Implemented PDF generation for invoices and secure document download with token-based access.",
               "Enhanced modules with scheduled actions and workflow automation."
             ]}
+            
           />
+          
+{/* Python Full-Stack Projects */}
+<TimelineItem
+  title="Hotel Booking System (Django + React)"
+  institution=""
+  points={[
+    "Developed a full-stack hotel booking application using Django REST API and React frontend.",
+    "Implemented room filtering, secure booking, user authentication, and admin management dashboard.",
+    "Created REST API endpoints for real-time room availability and booking data."
+  ]}
+/>
+<TimelineItem
+  title="Agriculture Support Portal"
+  institution=""
+  points={[
+    "Developed a web portal for farmers offering crop information, expert consultation, and news updates.",
+    "Used Django for backend and vanilla JavaScript + Bootstrap for frontend.",
+    "Integrated an admin panel to manage posts, users, and real-time support tickets."
+  ]}
+/>
+<TimelineItem
+  title="Sales Report Dashboard"
+  institution=""
+  points={[
+    "Designed a sales analytics tool using Django and Chart.js to analyze salesperson-wise and monthly sales data.",
+    "Built interactive charts and reports with complex PostgreSQL queries."
+  ]}
+/>
+<TimelineItem
+  title="Task Management App (React + Django REST Framework)"
+  institution=""
+  points={[
+    "Built a task-tracking app with drag-and-drop, due dates, and filtering features.",
+    "Implemented token-based authentication and user-specific views using Django REST Framework."
+  ]}
+/>
         </div>
       </div>
     </div>
