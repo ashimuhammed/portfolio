@@ -39,19 +39,19 @@ const navbar = () => {
             <li><a className='font-Ovo' href='#portfolio'>Resume</a> </li>
             <li><a className='font-Ovo' href='#contact'>contact me</a> </li>
         </ul>
-        {/* <div className='flex items-center gap-4 mb-10'>
+        <div className='flex items-center gap-4 mb-10'>
             <button>
                 <Image src={assets.moon_icon} alt='' className='w-6'/>
             </button>
 
             <a href='contact'className='hidden lg:flex items-center gap-3 px-10
-            py-2.5 border border-gray-500 rounded-full 
-            ml-4 font-Ovo'>contact <Image src={assets.arrow_icon} alt="" className='w-3'/></a>
+            py-2.5 
+            ml-4 font-Ovo'></a>
 
             <button className='block md:hidden ml-3' onClick={openMenu}>
             <Image src={assets.menu_black} alt='' className='w-6'/>
             </button>
-        </div> */}
+        </div>
         {/*---------------mobile menu-----------*/}
 
         <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64
