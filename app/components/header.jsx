@@ -38,24 +38,32 @@ const Header = () => {
 
         {/* Resume Buttons */}
         <div className='flex flex-col sm:flex-row items-center gap-4'>
-          {/* Odoo Resume Button */}
-          <button
-            onClick={() => downloadFile("https://drive.google.com/file/d/1jUH9FxlhaZ765AKdwjaIumUWvkETleix/view?usp=sharing")}
-            className='px-6 py-3 border rounded-full border-gray-500 flex items-center gap-2'
-          >
-            Odoo Resume
-            <Image src={assets.download_icon} alt='Download Odoo' className='w-4' />
-          </button>
 
-          {/* Full Stack Resume Button */}
-          <button
-            onClick={() => downloadFile("https://drive.google.com/file/d/1GqGonWSBn_5F1NSMjY2YrhW08VWoH0WJ/view?usp=sharing")}
-            className='px-6 py-3 border rounded-full border-gray-500 flex items-center gap-2'
-          >
-            Full Stack Resume
-            <Image src={assets.download_icon} alt='Download full stack' className='w-4' />
-          </button>
-        </div>
+  {/* Odoo Resume Button */}
+  <a
+    href="https://drive.google.com/uc?export=download&id=1jUH9FxlhaZ765AKdwjaIumUWvkETleix"
+    download
+    target="_blank"
+    rel="noopener noreferrer"
+    className='px-6 py-3 border rounded-full border-gray-500 flex items-center gap-2'
+  >
+    Odoo Resume
+    <Image src={assets.download_icon} alt='Download Odoo' className='w-4' />
+  </a>
+
+  {/* Full Stack Resume Button */}
+  <a
+    href="https://drive.google.com/uc?export=download&id=1GqGonWSBn_5F1NSMjY2YrhW08VWoH0WJ"
+    download
+    target="_blank"
+    rel="noopener noreferrer"
+    className='px-6 py-3 border rounded-full border-gray-500 flex items-center gap-2'
+  >
+    Full Stack Resume
+    <Image src={assets.download_icon} alt='Download Full Stack' className='w-4' />
+  </a>
+
+</div>
 
         {/* Contact Me Button Below */}
         <a
