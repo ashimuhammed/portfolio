@@ -91,7 +91,7 @@ export default function Portfolio() {
           <TimelineItem
             title="ODOO DEVELOPER-INTERN"
             institution="BTRAC Business Technology"
-            date="Nov 2024 – Present"
+            date="Nov 2024 – Mar 2025"
             points={[
               "Developed and maintained multiple Odoo modules including a hospital management system and a student-teacher portal.",
               "Collaborated with a team to design and implement features for a complaint registration system and CRM module.",
