@@ -2,7 +2,7 @@ import React from 'react';
 
 const experiences = [
   {
-    title: 'Odoo Developer Intern (Nov /24 - Present )',
+    title: 'Odoo Developer Intern (Nov /24 - Mar/25 )',
     organization: 'BTRAC (Business Technology Research & Analytics Center)',
     description: `Odoo Developer at BTRAC, developing and customizing multiple Odoo modules to enhance business processes. Gained expertise in module development, workflow automation, and database management while optimizing Odoo functionality to meet business needs.`,
   },
