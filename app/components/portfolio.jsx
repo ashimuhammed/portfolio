@@ -66,7 +66,7 @@ export default function Portfolio() {
       <div className="max-w-4xl mx-auto px-2">
         <h2 className="text-2xl font-bold mb-6 text-gray-900">EDUCATION</h2>
         <div className="border-l-2 border-teal-500 pl-4">
-          <TimelineItem title="DIPLOMA IN ODOO DEVELOPMENT (ONGOING)" institution="BTRAC Kannur" date="October 2024" />
+          <TimelineItem title="Odoo ERP Customization and Module Development" institution="BTRAC Kannur" date="Year of Completion: March 2025" />
           <TimelineItem title="DIPLOMA IN SOFTWARE engineering " institution="G -TEC COMPUTER EDUCATION" date="Year of completion: 2023"/>
           <TimelineItem title="DEGREE IN ENGLISH" institution="UNIVERSITY OF CALICUT" date="Year of Completion: 2021" />
           <TimelineItem title="PLUS TWO (HIGH SCHOOL)" institution="GHSS KARAKUNNU, Manjeri" date="Year of Completion: 2018" />
