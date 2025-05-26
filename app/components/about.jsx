@@ -76,15 +76,15 @@ const About = () => {
 <div className='my-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 '>
   {[
     { skill: 'HTML', percent: 100, icon: assets.html },
-    { skill: 'CSS', percent: 97, icon: assets.css },
-    { skill: 'JavaScript', percent: 85, icon: assets.javascript },
-    { skill: 'Odoo', percent: 90, icon: assets.odoo },
-    { skill: 'Python', percent: 95, icon: assets.python },
-    { skill: 'Django', percent: 90, icon: assets.django },
-    { skill: 'XML', percent: 90, icon: assets.xml },
-    { skill: 'PostgreSQL', percent: 85, icon: assets.postgresql },
-    { skill: 'MySQL', percent: 89, icon: assets.mysql },
-    { skill: 'React', percent: 75, icon: assets.react },
+    { skill: 'CSS', percent: 100, icon: assets.css },
+    { skill: 'JavaScript', percent: 95, icon: assets.javascript },
+    { skill: 'Odoo', percent: 96, icon: assets.odoo },
+    { skill: 'Python', percent: 98, icon: assets.python },
+    { skill: 'Django', percent: 97, icon: assets.django },
+    { skill: 'XML', percent: 95, icon: assets.xml },
+    { skill: 'PostgreSQL', percent: 90, icon: assets.postgresql },
+    { skill: 'MySQL', percent: 90, icon: assets.mysql },
+    { skill: 'React', percent: 89, icon: assets.react },
 
   ].map(({ skill, percent, icon }, index) => (
     <div

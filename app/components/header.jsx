@@ -40,7 +40,7 @@ const Header = () => {
         <div className='flex flex-col sm:flex-row items-center gap-4'>
           {/* Odoo Resume Button */}
           <button
-            onClick={() => downloadFile("https://drive.google.com/uc?export=download&id=1xcQa4fpTcsWnBsrczZO6dQy8RXy4dGpW")}
+            onClick={() => downloadFile("https://drive.google.com/file/d/1jUH9FxlhaZ765AKdwjaIumUWvkETleix/view?usp=sharing")}
             className='px-6 py-3 border rounded-full border-gray-500 flex items-center gap-2'
           >
             Odoo Resume
@@ -49,7 +49,7 @@ const Header = () => {
 
           {/* Full Stack Resume Button */}
           <button
-            onClick={() => downloadFile("https://drive.google.com/uc?export=download&id=1XYFmLf6t0XDdHVe7TGWemqhe4QnLV3e5")}
+            onClick={() => downloadFile("https://drive.google.com/file/d/1GqGonWSBn_5F1NSMjY2YrhW08VWoH0WJ/view?usp=sharing")}
             className='px-6 py-3 border rounded-full border-gray-500 flex items-center gap-2'
           >
             Full Stack Resume

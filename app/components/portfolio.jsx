@@ -53,7 +53,7 @@ export default function Portfolio() {
           <div className="border-l-2 border-teal-500 pl-4 space-y-2">
             <p><strong>Programming Languages:</strong> Python, JavaScript</p>
             <p><strong>Web Frameworks:</strong> Odoo, Django</p>
-            <p><strong>Front-end Technologies:</strong> HTML, CSS, Bootstrap, JavaScript</p>
+            <p><strong>Front-end Technologies:</strong> HTML, CSS, Bootstrap, JavaScript , React</p>
             <p><strong>API Development:</strong> RESTful APIs</p>
             <p><strong>Databases:</strong> MySQL, PostgreSQL</p>
             <p><strong>Version Control:</strong> Git, GitHub</p>
