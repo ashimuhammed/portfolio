@@ -39,7 +39,7 @@ const navbar = () => {
             <li><a className='font-Ovo' href='#portfolio'>Resume</a> </li>
             <li><a className='font-Ovo' href='#contact'>contact me</a> </li>
         </ul>
-        <div className='flex items-center gap-4 mb-10'>
+        {/* <div className='flex items-center gap-4 mb-10'>
             <button>
                 <Image src={assets.moon_icon} alt='' className='w-6'/>
             </button>
@@ -51,7 +51,7 @@ const navbar = () => {
             <button className='block md:hidden ml-3' onClick={openMenu}>
             <Image src={assets.menu_black} alt='' className='w-6'/>
             </button>
-        </div>
+        </div> */}
         {/*---------------mobile menu-----------*/}
 
         <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64
