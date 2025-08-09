@@ -39,41 +39,23 @@ const Header = () => {
         {/* Resume Buttons */}
         <div className='flex flex-col sm:flex-row items-center gap-4'>
 
-  {/* Odoo Resume Button */}
-  <a
-    href="https://drive.google.com/uc?export=download&id=1jUH9FxlhaZ765AKdwjaIumUWvkETleix"
-    download
-    target="_blank"
-    rel="noopener noreferrer"
-    className='px-6 py-3 border rounded-full border-gray-500 flex items-center gap-2'
-  >
-    Odoo Resume
-    <Image src={assets.download_icon} alt='Download Odoo' className='w-4' />
-  </a>
+ 
 
   {/* Full Stack Resume Button */}
   <a
-    href="https://drive.google.com/uc?export=download&id=1GqGonWSBn_5F1NSMjY2YrhW08VWoH0WJ"
+    href="https://drive.google.com/drive/folders/1LsybsxEQj28Ee-J_11q2Qbz2yKKpSyhY?usp=sharing"
     download
     target="_blank"
     rel="noopener noreferrer"
     className='px-6 py-3 border rounded-full border-gray-500 flex items-center gap-2'
   >
-    Full Stack Resume
+    download resume
     <Image src={assets.download_icon} alt='Download Full Stack' className='w-4' />
   </a>
 
 </div>
 
-        {/* Contact Me Button Below */}
-        <a
-          href="#contact"
-          className='px-10 py-3 border border-white rounded-full bg-black text-white  
-                    flex items-center gap-2'
-        >
-          Contact Me
-          <Image src={assets.right_arrow_white} alt='Arrow' className='w-4' />
-        </a>
+
       </div>
     </div>
   );
