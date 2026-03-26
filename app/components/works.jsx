@@ -36,7 +36,7 @@ const TimelineStep = ({ year, title, institution, description, icon, isLast }) =
 const CareerTimeline = () => {
   const journey = [
     {
-      year: "2025 - Present",
+      year: "2025 - 2025",
       title: "Junior Odoo Developer",
       institution: "Code-OX Technologies, Calicut",
       description: "Leading technical implementations and enterprise-level customizations. Specializing in Hospital Management Systems and complex database architecture using PostgreSQL.",
