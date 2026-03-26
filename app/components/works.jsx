@@ -1,47 +1,101 @@
 import React from 'react';
+import { GraduationCap, Code, Briefcase, BookOpen } from 'lucide-react';
 
-const experiences = [
-  {
-    title: 'Odoo Developer Intern (Nov /24 - Mar/25 )',
-    organization: 'BTRAC (Business Technology Research & Analytics Center)',
-    description: `Odoo Developer at BTRAC, developing and customizing multiple Odoo modules to enhance business processes. Gained expertise in module development, workflow automation, and database management while optimizing Odoo functionality to meet business needs.`,
-  },
-  {
-    title: 'Python full stack Developer Internship (July /24 – Nov /24)',
-    organization: 'BTRAC (Business Technology Research & Analytics Center)',
-    description: `Completed a 5-month internship at BTRAC, working on one real project (an agriculture website) and two additional projects. Gained hands-on experience in web development and project implementation.`,
-  },
-  {
-    title: 'Python/Django',
-    organization: 'G-TEC Computer Education, Manjeri',
-    description: `Completed an 8-month Python and Django course at G-TEC Computer Education, gaining hands-on experience in Python programming, Django web development, database management, and API development.`,
-  },
-];
+const TimelineStep = ({ year, title, institution, description, icon, isLast }) => (
+  <div className="relative flex gap-8 group">
+    {/* Line and Icon Column */}
+    <div className="flex flex-col items-center">
+      <div className="z-10 flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-gray-800 border-4 border-teal-500 shadow-xl group-hover:scale-110 transition-transform duration-300 text-teal-600">
+        {icon}
+      </div>
+      {!isLast && (
+        <div className="w-1 h-full bg-gradient-to-b from-teal-500 to-gray-200 dark:to-gray-700 -mt-1 mb-2"></div>
+      )}
+    </div>
 
-const Experience = () => {
+    {/* Content Card */}
+    <div className="pb-16 pt-1">
+      <span className="inline-block px-3 py-1 mb-3 text-xs font-bold tracking-widest text-white uppercase bg-teal-500 rounded-full">
+        {year}
+      </span>
+      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-teal-600 transition-colors">
+        {title}
+      </h3>
+      <p className="text-sm font-semibold text-teal-600 dark:text-teal-400 mb-4 italic uppercase tracking-wide">
+        {institution}
+      </p>
+      <div className="max-w-xl p-6 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl shadow-sm group-hover:shadow-md transition-shadow">
+        <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-Ovo">
+          {description}
+        </p>
+      </div>
+    </div>
+  </div>
+);
+
+const CareerTimeline = () => {
+  const journey = [
+    {
+      year: "2025 - Present",
+      title: "Junior Odoo Developer",
+      institution: "Code-OX Technologies, Calicut",
+      description: "Leading technical implementations and enterprise-level customizations. Specializing in Hospital Management Systems and complex database architecture using PostgreSQL.",
+      icon: <Briefcase size={22} />,
+    },
+    {
+      year: "2024 - 2025",
+      title: "Odoo ERP Developer Intern",
+      institution: "BTRAC Business Technology, Kannur",
+      description: "Gained hands-on experience in Odoo module development, XML/QWeb view customization, and workflow automation for business solutions.",
+      icon: <Briefcase size={22} />,
+    },
+    {
+      year: "2024",
+      title: "Python Full-Stack Developer Internship",
+      institution: "BTRAC Business Technology, Kannur",
+      description: "Mastered the Django + React stack. Built high-performance applications including a Hotel Booking System with REST APIs and secure payment gateways.",
+      icon: <Code size={22} />,
+    },
+    {
+      year: "2023",
+      title: "Diploma in Software Engineering",
+      institution: "G-TEC Computer Education",
+      description: "Intensive training in core programming logic, data structures, and web technologies, marking my transition into the tech industry.",
+      icon: <GraduationCap size={22} />,
+    },
+    {
+      year: "2021",
+      title: "Bachelor of Arts in English",
+      institution: "University of Calicut",
+      description: "Cultivated strong communication and analytical skills, which I now apply to writing clean documentation and structured code.",
+      icon: <BookOpen size={22} />,
+    },
+  ];
+
   return (
-    <section
-      id="experience"
-      className="w-full px-6 md:px-[10%] py-16 text-center scroll-mt-20 bg-gray-50"
-    >
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 font-Ovo">Experience</h2>
-      <div className="w-20 h-1 bg-teal-500 mx-auto my-4"></div>
+    /* Added scroll-mt-20 to ensure the navbar doesn't cover the title when scrolling */
+    <section id="portfolio" className="py-24 px-[12%] bg-white dark:bg-gray-900 transition-colors duration-300 scroll-mt-20">
+      <div className="text-center mb-20">
+        <h4 className="text-teal-600 font-semibold text-lg mb-2 uppercase tracking-widest">The Story So Far</h4>
+        <h2 className="text-5xl font-bold text-gray-800 dark:text-white font-Ovo">My Career Journey</h2>
+        <div className="w-20 h-1.5 bg-teal-500 mx-auto mt-4 rounded-full"></div>
+      </div>
 
-      <div className="flex flex-col gap-10 mt-12">
-        {experiences.map((exp, index) => (
-          <div
+      <div className="max-w-4xl mx-auto mt-10">
+        {journey.map((item, index) => (
+          <TimelineStep
             key={index}
-            className="bg-white border border-gray-200 rounded-xl shadow-sm px-6 py-6 text-left mx-auto max-w-3xl hover:shadow-lg transition-shadow duration-300"
-          >
-            <h3 className="text-xl md:text-2xl font-semibold text-gray-800">{exp.title}</h3>
-            <p className="text-sm text-teal-600 font-medium mt-1">{exp.organization}</p>
-            <hr className="my-4 border-gray-200" />
-            <p className="text-gray-700 leading-relaxed">{exp.description}</p>
-          </div>
+            year={item.year}
+            title={item.title}
+            institution={item.institution}
+            description={item.description}
+            icon={item.icon}
+            isLast={index === journey.length - 1}
+          />
         ))}
       </div>
     </section>
   );
 };
 
-export default Experience;
+export default CareerTimeline;

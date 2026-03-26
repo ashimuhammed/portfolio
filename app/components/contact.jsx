@@ -1,137 +1,154 @@
 'use client';
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
+// Note: You can install lucide-react or use standard SVG icons
+import { Mail, Phone, MapPin, Send, ExternalLink } from 'lucide-react'; 
 
 const MapComponent = dynamic(() => import('./MapComponent'), {
   ssr: false,
   loading: () => (
-    <div className="h-64 md:h-80 bg-gray-100 rounded-lg flex items-center justify-center">
-      <p>Loading map...</p>
+    <div className="h-full w-full bg-gray-100 dark:bg-gray-800 animate-pulse flex items-center justify-center">
+      <p className="text-gray-400">Loading Map View...</p>
     </div>
   )
 });
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: '', email: '', subject: '', message: ''
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    // Add form submission logic here (e.g., API call)
+    console.log("Form submitted:", formData);
+    // Add your EmailJS or API logic here
   };
 
   return (
-    <div id="contact" className="px-6 mb-24 mt-12 py-20 max-w-6xl mx-auto scroll-mt-20 ">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-800">Contact Me</h1>
-        <div className="w-16 h-1 bg-teal-500 mx-auto my-4"></div>
-      </div>
+    <section id="contact" className="py-24 px-6 bg-gray-50 dark:bg-gray-900/50 transition-colors duration-300">
+      <div className="max-w-6xl mx-auto">
+        
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
+            Get In <span className="text-teal-500">Touch</span>
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+            Ready to start a project or have questions about Odoo customization? I'm just a message away.
+          </p>
+        </div>
 
-      <div className="flex flex-col lg:flex-row gap-8">
-        {/* Info + Map */}
-        <div className="lg:w-1/2 flex flex-col gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Address</h2>
-            <p className="text-gray-600 mb-2">Thattankunnu, Thrikkalangode(po), Malappuram</p>
-            <p className="text-gray-600">PIN: 676123</p>
+        <div className="flex flex-col lg:flex-row gap-12">
+          
+          {/* Left Side: Contact Details & Map */}
+          <div className="lg:w-5/12 space-y-8">
+            <div className="grid grid-cols-1 gap-6">
+              {/* Contact Cards */}
+              {[
+                { icon: <MapPin className="text-teal-500" />, title: "Location", detail: "Thattankunnu, Malappuram, Kerala", sub: "PIN: 676123" },
+                { icon: <Phone className="text-teal-500" />, title: "Call Me", detail: "+91 8606648865", sub: "Mon - Sat, 9am - 6pm" },
+                { icon: <Mail className="text-teal-500" />, title: "Email", detail: "ashiquetharakan@gmail.com", sub: "Online 24/7" }
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-start p-4 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:border-teal-500/50 transition-all">
+                  <div className="p-3 bg-teal-50 dark:bg-teal-900/20 rounded-lg mr-4">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 dark:text-white">{item.title}</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">{item.detail}</p>
+                    <p className="text-gray-400 text-xs mt-1">{item.sub}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-            <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">Contact</h2>
-            <p className="text-gray-600 mb-2">+91 8606648865</p>
-
-            <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">Email</h2>
-            <p className="text-gray-600">ashiquetharakan@gmail.com</p>
-          </div>
-
-          <div className="h-64 md:h-80 bg-white rounded-lg shadow-md overflow-hidden">
-            <MapComponent />
-            <div className="text-center py-2 bg-gray-50">
+            {/* Map Container */}
+            <div className="relative group rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-gray-800 h-72">
+              <MapComponent />
+              <div className="absolute inset-0 bg-teal-500/5 group-hover:bg-transparent transition-colors pointer-events-none"></div>
               <a
                 href="https://www.openstreetmap.org/search?query=Thattankunnu%2C%20Thrikkalangode%2C%20Malappuram"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-teal-600 hover:text-teal-800 text-sm font-medium"
+                className="absolute bottom-4 right-4 bg-white dark:bg-gray-800 px-4 py-2 rounded-full text-xs font-bold shadow-lg flex items-center gap-2 hover:scale-105 transition-transform"
               >
-                View larger map
+                Open Maps <ExternalLink size={14} />
               </a>
             </div>
           </div>
-        </div>
 
-        {/* Contact Form */}
-        <div className="lg:w-1/2 bg-white p-6 rounded-lg shadow-md">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-gray-700 font-medium">Your Name</label>
-              <input
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full mt-1 px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
-              />
+          {/* Right Side: Contact Form */}
+          <div className="lg:w-7/12">
+            <div className="bg-white dark:bg-gray-800 p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div className="space-y-2">
+                    <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Full Name</label>
+                    <input
+                      name="name"
+                      placeholder="Enter your name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-5 py-3.5 rounded-xl bg-gray-50 dark:bg-gray-900 border-none focus:ring-2 focus:ring-teal-500 dark:text-white outline-none transition-all"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Email Address</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="email@example.com"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-5 py-3.5 rounded-xl bg-gray-50 dark:bg-gray-900 border-none focus:ring-2 focus:ring-teal-500 dark:text-white outline-none transition-all"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Subject</label>
+                  <input
+                    name="subject"
+                    placeholder="What's this about?"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full px-5 py-3.5 rounded-xl bg-gray-50 dark:bg-gray-900 border-none focus:ring-2 focus:ring-teal-500 dark:text-white outline-none transition-all"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 ml-1">Message</label>
+                  <textarea
+                    name="message"
+                    rows={5}
+                    placeholder="Tell me about your project..."
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-5 py-3.5 rounded-xl bg-gray-50 dark:bg-gray-900 border-none focus:ring-2 focus:ring-teal-500 dark:text-white outline-none transition-all resize-none"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full flex items-center justify-center gap-3 bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-teal-500/30 transition-all hover:-translate-y-1 active:scale-95"
+                >
+                  Send Message <Send size={18} />
+                </button>
+              </form>
             </div>
+          </div>
 
-            <div>
-              <label htmlFor="email" className="block text-gray-700 font-medium">Your Email</label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full mt-1 px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="subject" className="block text-gray-700 font-medium">Subject</label>
-              <input
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                className="w-full mt-1 px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-gray-700 font-medium">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={5}
-                required
-                className="w-full mt-1 px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-2 rounded-lg transition-colors duration-200"
-            >
-              Send Message
-            </button>
-          </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
